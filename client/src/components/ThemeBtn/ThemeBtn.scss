@@ -1,0 +1,20 @@
+@import "/Users/rijuljain/Documents/photos/Web Development/react-social-media/client/src/styles/themechanger.scss";
+
+
+.btn-theme {
+  // background-color: var(--textThemeColor1);
+  border: none;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 18px;
+  padding: 5px;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+
+
+  &:hover{
+    filter: drop-shadow(6px 6px 10px rgb(0, 0, 0));
+  }
+}

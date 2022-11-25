@@ -1,0 +1,101 @@
+@import "../../style.scss";
+@import "/Users/rijuljain/Documents/photos/Web Development/react-social-media/client/src/styles/themechanger.scss";
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 50px;
+    border-bottom: 1px solid lightgrey;
+    position: sticky !important;
+    top: 0;
+    background-color: var(--bgThemeColor1);
+    color: var(--textThemeColor1);
+    transition: background-color 0.5s ease;
+    border-color: var(--borderColor);
+    z-index: 999;
+
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        border-color: var(--borderColor);
+
+        @include tablet{
+            gap: 17px;
+        }
+        
+
+        span{
+            font-weight: bold;
+            font-size: 20px;
+            color: var(--logoColor);
+        }
+
+        .search{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            padding: 5px;
+            background-color: var(--bgThemeColor2);
+            border-color: var(--borderColor);
+
+            input{
+                border: none;
+                width: 500px;
+                background-color: var(--bgThemeColor2);
+                border-color: var(--bgThemeColor2);
+                color: var(--textThemeColor2);
+
+                @include mobile{
+                    display: none;
+                }
+
+                @include tablet{
+                    width: 200px;
+                }
+            }
+        }
+    }
+
+
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include mobile{
+            display: none;
+        }
+
+        @include tablet{
+            gap: 17px;
+        }
+        
+        .user{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            span{
+                text-align: center;
+
+                @include tablet{
+                    display: none;
+                }
+            }
+        }
+
+        
+    }
+}

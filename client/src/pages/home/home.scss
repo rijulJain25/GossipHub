@@ -1,0 +1,19 @@
+@import "../../style.scss";
+
+
+.home{
+    padding: 20px 70px;
+    background-color: var(--bgThemeColor2);
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");
+    
+    
+    @include mobile{
+        padding: 10px;
+    }
+
+    @include tablet{
+        padding: 20px;
+    }
+    
+
+}

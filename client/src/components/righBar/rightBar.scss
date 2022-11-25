@@ -1,0 +1,109 @@
+@import "../../style.scss";
+
+.rightbar{
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    background-color: var(--bgThemeColor2);
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    @include mobile{
+        display: none;
+    }
+
+    @include tablet{
+        display: none;
+    }
+
+    .container{
+        padding: 20px;
+
+
+        .item{
+            -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: var(--bgThemeColor1);
+
+            span{
+                color: gray;
+            }
+
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 20px 0px;
+
+                .userInfo{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    position: relative;
+
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    .online{
+                        width: 12px;
+                        border-radius: 50%;
+                        height: 12px;
+                        background-color: limegreen;
+                        position: absolute;
+                        top: 0;
+                        left: 30px;
+                    }
+
+                    p{
+                        color: var(--textThemeColor2);
+                        font-size: 13px;
+                    }
+
+                    span{
+                        font-weight: 500;
+                        color: var(--textThemeColor1);
+                    }
+
+                }
+
+                .timeAgo{
+                    font-size: 13px;
+                    color: var(--textThemeColor2);
+                }
+
+                .buttons{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    button{
+                        border: none;
+                        padding: 5px;
+                        color: white;
+                        cursor: pointer;
+
+                        &:first-child{
+                            background-color: #5271ff;
+                        }
+                        &:last-child{
+                            background-color: #f0544f;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

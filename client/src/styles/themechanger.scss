@@ -1,0 +1,46 @@
+@import "/Users/rijuljain/Documents/photos/Web Development/react-social-media/client/src/styles/colors";
+
+$themes: (
+  bgThemeColor1: (
+    darkTheme: $black700,
+    lightTheme: white
+  ),
+  bgThemeColor2: (
+    darkTheme: $black600,
+    lightTheme: #f6f3f3
+  ),
+  textThemeColor1: (
+    darkTheme: whitesmoke,
+    lightTheme: #000
+  ),
+  textThemeColor2: (
+    darkTheme: $ldgrey100,
+    lightTheme: $grey300
+  ),
+  logoColor: (
+    darkTheme: white,
+    lightTheme: darkblue,
+  ),
+  borderColor: (
+    darkTheme: #444,
+    lightTheme: lightgray,
+  )
+);
+
+@mixin styles($mode) {
+  @each $key, $map in $themes {
+    @each $prop, $color in $map {
+      @if $prop == $mode {
+        --#{$key}: #{$color};
+      }
+    }
+  }
+}
+
+.dark-mode {
+  @include styles("darkTheme");
+}
+
+.light-mode {
+  @include styles("lightTheme");
+}

@@ -1,0 +1,99 @@
+.register {
+    height: 100vh;
+    background-color: rgb(193, 190, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .card {
+      width: 60%;
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: white;
+      border-radius: 10px;
+      min-height: 550px;
+      max-height: 700px;
+      overflow: hidden;
+  
+      .right {
+        flex: 1;
+        background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+          url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600")
+            center;
+        background-size: cover;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: white;
+  
+        h1 {
+          font-size: 80px;
+          line-height: 80px;
+        }
+        
+        p {
+            font-size: 14px;
+        }
+  
+        span {
+          font-size: 12px;
+        }
+        
+        button {
+          width: 50%;
+          padding: 10px;
+          border: 1px solid white;
+          background-color: white;
+          color: rebeccapurple;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        button:hover{
+            color: white;
+            background-color: #5f58ee;
+        }
+      }
+  
+      .left {
+        flex: 1;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+  
+        h1 {
+        color: #555;
+        font-size: 40px;
+        }
+        
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          
+          input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+          }
+          
+          button {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #938eef;
+            background-color: #938eef;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          button:hover{
+            color: white;
+            background-color: #5f58ee;
+            border: 1px solid #5f58ee;
+          }
+        }
+      }
+    }
+  }
